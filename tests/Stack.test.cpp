@@ -1,5 +1,5 @@
-#include <GUnit.h>
 #include "Stack.hpp"
+#include <GUnit.h>
 
 GTEST("Stack Test") {
   cards::Stack<int> stack{};
@@ -7,9 +7,7 @@ GTEST("Stack Test") {
   stack.addToTop(2);
   stack.addToTop(1);
 
-  SHOULD("return 3 for size") {
-    EXPECT_EQ(3, stack.size());
-  }
+  SHOULD("return 3 for size") { EXPECT_EQ(3, stack.size()); }
 
   stack.addToTop(0);
 
